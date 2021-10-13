@@ -20,3 +20,7 @@ jobs:
         run: echo "ENVIRONMENT=production" >> $GITHUB_ENV
       - name: Check ENV
         run: echo $ENVIRONMENT
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          script: sh ./deploy.sh --$ENVIRONMENT
