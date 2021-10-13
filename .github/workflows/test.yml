@@ -21,6 +21,7 @@ jobs:
       - name: Check ENV
         run: echo $ENVIRONMENT
       - name: executing remote ssh commands using ssh key
+        shell: bash
         run: |
           chmod +x "${GITHUB_WORKSPACE}/.github/workflows/test.sh"
           ${GITHUB_WORKSPACE}/.github/workflows/test.sh --$ENVIRONMENT
