@@ -14,12 +14,9 @@ jobs:
     steps:
       - name: Set env to staging
         if: endsWith(github.ref, '/develop')
-        run: |
-          echo "::set-env name=ENVIRONMENT::staging"
+        run: echo "ENVIRONMENT=staging" >> $GITHUB_ENV
       - name: Set env to production
         if: endsWith(github.ref, '/master')
-        run: |
-          echo "::set-env name=ENVIRONMENT::production"
+        run: echo "ENVIRONMENT=production" >> $GITHUB_ENV
       - name: Set env to production
-        if: endsWith(github.ref, '/master')
-        run: echo "ENVIRONMENT $ENVIRONMENT"
+        run: echo "ENVIRONMENT $GITHUB_ENV"
