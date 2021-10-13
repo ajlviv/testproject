@@ -21,4 +21,5 @@ jobs:
       - name: Check ENV
         run: echo $ENVIRONMENT
       - name: executing remote ssh commands using ssh key
-        run: sh ./test.sh --$ENVIRONMENT
+        run: |
+          sh ./test.sh --$ENVIRONMENT
