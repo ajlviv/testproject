@@ -18,5 +18,5 @@ jobs:
       - name: Set env to production
         if: endsWith(github.ref, '/master')
         run: echo "ENVIRONMENT=production" >> $GITHUB_ENV
-      - name: Set env to production
-        run: echo "ENVIRONMENT $GITHUB_ENV"
+      - name: Check ENV
+        run: echo "ENVIRONMENT ${{ GITHUB_ENV }}"
