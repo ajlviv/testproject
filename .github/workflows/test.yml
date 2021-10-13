@@ -20,6 +20,7 @@ jobs:
         run: echo "ENVIRONMENT=production" >> $GITHUB_ENV
       - name: Check ENV
         run: echo $ENVIRONMENT
+      - uses: actions/checkout@v2
       - name: executing remote ssh commands using ssh key
         shell: bash
         run: |
