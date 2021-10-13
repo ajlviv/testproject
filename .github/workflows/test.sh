@@ -1,7 +1,7 @@
 #!/bin/bash
 
 envv='production'
-if [ $*=*--staging* ]
+if [[ "$*" == *--staging* ]]
 then
   envv='staging'
 fi
