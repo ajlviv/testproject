@@ -19,4 +19,4 @@ jobs:
         if: endsWith(github.ref, '/master')
         run: echo "ENVIRONMENT=production" >> $GITHUB_ENV
       - name: Check ENV
-        run: echo "ENVIRONMENT ${{ GITHUB_ENV }}"
+        run: echo "ENVIRONMENT ${{ ENVIRONMENT }}"
